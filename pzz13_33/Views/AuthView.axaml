@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 Background="#FF59D455"
+             x:Class="pzz13_33.Views.AuthView">
+	<Grid VerticalAlignment="Center">
+		<StackPanel Width="200" Margin="20">
+			<TextBlock HorizontalAlignment="Stretch" FontSize="24" Margin="0,0,0,20" TextAlignment="Center" Text="Авторизация"/>
+			<TextBlock HorizontalAlignment="Stretch" Margin="0,0,0,10" Text="Логин" Foreground="Black"/>
+			<TextBox HorizontalAlignment="Stretch" Margin="0,0,0,10" BorderBrush="Black" Name="tbLogin"/>
+			<TextBlock HorizontalAlignment="Stretch" Margin="0,0,0,10" Text="Пароль" Foreground="Black"/>
+			<TextBox HorizontalAlignment="Stretch" Margin="0,0,0,10" BorderBrush="Black" Name="tbPassword"/>
+			<CheckBox Name="checkBox">Показать пароль</CheckBox>
+			<Button Name="buttonEnter" HorizontalAlignment="Stretch" Content="Войти" Margin="0,14,0,0"/>
+			<Button Name="buttonRegistr" HorizontalAlignment="Stretch"  Content="Регистрация" Margin="0,14,0,0"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

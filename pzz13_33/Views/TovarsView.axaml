@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 Background="#FF59D455"
+             x:Class="pzz13_33.Views.TovarsView">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="220"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="150"/>
+		</Grid.RowDefinitions>
+		<ListBox Name="listBox" Background="Silver"  Grid.Row="0" ItemsSource="{Binding TovarsList}"  Grid.ColumnSpan="2">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Vertical" Background="LightGreen">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock Foreground="white"  Padding="10 10 0 10" FontWeight="Bold" Text="Товар:"/>
+							<TextBlock Foreground="white"  Padding="10" Text="{Binding Name}"/>
+						</StackPanel>
+						<StackPanel Orientation="Horizontal">
+							<TextBlock Foreground="white"  Padding="10 10 0 10" FontWeight="Bold" Text="Описание:"/>
+							<TextBlock Foreground="white"  Padding="10" Text="{Binding Discription}"/>
+						</StackPanel>
+						<StackPanel Orientation="Horizontal">
+							<TextBlock Foreground="white"  Padding="10 10 0 10" FontWeight="Bold" Text="Цена в Рублях:"/>
+							<TextBlock Foreground="white"  Padding="10" Text="{Binding Price}"/>
+						</StackPanel>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<WrapPanel Grid.Row="1" Orientation="Vertical" Background="#FF59D455" Grid.Column="0"  >
+			<TextBlock Text="Наименования товара" Margin="10,10,0,0"/>
+			<TextBox Name="TextBoxNameTovar" Width="180" Height="20" Background="White" Margin="10,10,0,0"/>
+			
+			<TextBlock Text="Цена товара" Margin="10,10,0,0"/>
+			<TextBox Name="TextBoxPrice" Width="180" Height="20" Background="White" Margin="10,10,0,0" />
+			
+			<TextBlock Text="Описание" Margin="10,10,0,0"/>
+			<TextBox Name="TextBoxDiscription" Width="180" Height="20" Background="White" Margin="10,10,0,0"/>
+
+			<Button Name="ButtonAdd" Width="180" Height="55" Content="Добавить товар" Margin="10,10,0,0"/>
+			<Button Name="ButtonDelete" Width="180" Height="55" Content="Удалить" Margin="10,10,0,0"/>
+		</WrapPanel>
+	</Grid>
+</UserControl>
